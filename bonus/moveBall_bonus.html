@@ -1,0 +1,46 @@
+<div id="' + id_names[counter_ball] + '" style="
+z-index:5;
+position:absolute;
+left:0px;
+top:0px;
+width:50px;
+height:50px;
+border-radius:50%;
+background:green"></div>
+
+<script>
+
+var velocityX = 5;
+var velocityY = 3;
+var positionX = 0;
+var positionY = 0;
+var ball = document.getElementById('ball');
+
+// YOUR CODE 
+// ----------------
+
+var direction = 1;
+var leftLimit = 250;
+var topLimit = 250;
+
+function Changes(){
+    positionX = positionX + velocityX;
+    positionY = positionY + velocityY;
+    ball.style.left = positionX + 'px';
+    ball.style.top = positionY + 'px';
+    if (parseInt(ball.style.left) >= leftLimit){
+      velocityX = velocityX * -1;
+    }
+    else if (parseInt(ball.style.left) <= 0) {
+      velocityX = velocityX * -1;
+    }
+    if (parseInt(ball.style.top) >= topLimit){
+      velocityY = velocityY * -1;
+    }
+    else if (parseInt(ball.style.top) <= 0) {
+      velocityY = velocityY * -1;
+    }
+  }
+setInterval(Changes, 5);
+
+</script>

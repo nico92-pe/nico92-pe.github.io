@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <body></body>
+    <script src="magic.js"></script>    
+    <script src="ball.js"></script>    
+</html>
+
+<script>
+   
+    //Ball0
+
+    var velocityX0 = 5;
+    var velocityY0 = 3;
+
+    var leftLimit0 = width;
+    var topLimit0 = height;
+
+    var ball0 = document.getElementById('ball0');
+    var positionX_ball0 = Math.floor(Math.random()*width);
+    var positionY_ball0 = Math.floor(Math.random()*height);
+
+    function Changes0(){
+        positionX_ball0 = positionX_ball0 + velocityX0;
+        positionY_ball0 = positionY_ball0 + velocityY0;
+        ball0.style.left = positionX_ball0 + 'px';
+        ball0.style.top = positionY_ball0 + 'px';
+        if (parseInt(ball0.style.left) >= leftLimit0){
+        velocityX0 = velocityX0 * -1;
+        }
+        else if (parseInt(ball0.style.left) <= 0) {
+        velocityX0 = velocityX0 * -1;
+        }
+        if (parseInt(ball0.style.top) >= topLimit0){
+        velocityY0 = velocityY0 * -1;
+        }
+        else if (parseInt(ball0.style.top) <= 0) {
+        velocityY0 = velocityY0 * -1;
+        }
+    }
+    setInterval(Changes0, 5);
+
+    //Ball1    
+
+    var velocityX1 = 5;
+    var velocityY1 = 3;
+
+    var leftLimit1 = width;
+    var topLimit1 = height;
+
+    var ball1 = document.getElementById('ball1');
+    var positionX_ball1 = Math.floor(Math.random()*width);
+    var positionY_ball1 = Math.floor(Math.random()*height);
+
+    function Changes1(){
+        positionX_ball1 = positionX_ball1 + velocityX1;
+        positionY_ball1 = positionY_ball1 + velocityY1;
+        ball1.style.left = positionX_ball1 + 'px';
+        ball1.style.top = positionY_ball1 + 'px';
+        if (parseInt(ball1.style.left) >= leftLimit1){
+        velocityX1 = velocityX1 * -1;
+        }
+        else if (parseInt(ball1.style.left) <= 0) {
+        velocityX1 = velocityX1 * -1;
+        }
+        if (parseInt(ball1.style.top) >= topLimit1){
+        velocityY1 = velocityY1 * -1;
+        }
+        else if (parseInt(ball1.style.top) <= 0) {
+        velocityY1 = velocityY1 * -1;
+        }
+    }
+    setInterval(Changes1, 5);
+
+    //Ball2
+
+    var velocityX2 = 5;
+    var velocityY2 = 3;
+
+    var leftLimit2 = width;
+    var topLimit2 = height;
+
+    var ball2 = document.getElementById('ball2');
+    var positionX_ball2 = Math.floor(Math.random()*width);
+    var positionY_ball2 = Math.floor(Math.random()*height);
+
+    function Changes2(){
+        positionX_ball2 = positionX_ball2 + velocityX2;
+        positionY_ball2 = positionY_ball2 + velocityY2;
+        ball2.style.left = positionX_ball2 + 'px';
+        ball2.style.top = positionY_ball2 + 'px';
+        if (parseInt(ball2.style.left) >= leftLimit2){
+        velocityX2 = velocityX2 * -1;
+        }
+        else if (parseInt(ball2.style.left) <= 0) {
+        velocityX2 = velocityX2 * -1;
+        }
+        if (parseInt(ball2.style.top) >= topLimit2){
+        velocityY2 = velocityY2 * -1;
+        }
+        else if (parseInt(ball2.style.top) <= 0) {
+        velocityY2 = velocityY2 * -1;
+        }
+    }
+    setInterval(Changes2, 5);
+
+    //Ball3
+
+    var velocityX3 = 5;
+    var velocityY3 = 3;
+
+    var leftLimit3 = width;
+    var topLimit3 = height;
+
+    var ball3 = document.getElementById('ball3');
+    var positionX_ball3 = Math.floor(Math.random()*width);
+    var positionY_ball3 = Math.floor(Math.random()*height);
+
+    function Changes3(){
+        positionX_ball3 = positionX_ball3 + velocityX3;
+        positionY_ball3 = positionY_ball3 + velocityY3;
+        ball3.style.left = positionX_ball3 + 'px';
+        ball3.style.top = positionY_ball3 + 'px';
+        if (parseInt(ball3.style.left) >= leftLimit3){
+        velocityX3 = velocityX3 * -1;
+        }
+        else if (parseInt(ball3.style.left) <= 0) {
+        velocityX3 = velocityX3 * -1;
+        }
+        if (parseInt(ball3.style.top) >= topLimit3){
+        velocityY3 = velocityY3 * -1;
+        }
+        else if (parseInt(ball3.style.top) <= 0) {
+        velocityY3 = velocityY3 * -1;
+        }
+    }
+    setInterval(Changes3, 5);
+
+</script>
