@@ -11,6 +11,7 @@ Please feel free to go to any directory to see my work.
 ## Contact
 
 Linkedin: https://www.linkedin.com/in/nicolas-oyague-9b428871/
+
 Phone: +51 943 830 608
 
 nico92-pe.github.io
