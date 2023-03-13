@@ -1,0 +1,45 @@
+<div id="container">
+  <!-- populated by JS-->
+</div>
+<script src="./boston.js"></script>
+<script>
+  function renderBoston(boston, container) {
+    var people = boston.data;
+    var len = boston.data.length;
+    var salaries = [];
+    var names = []
+    var over100k = 0;
+
+    for (let i = 0; i < len; i++) {
+      salaries.push(people[i][11]);
+      names.push(people[i][8]);
+    }
+
+    const array100k = salaries.filter(function(num) {
+    return num > 100000;
+    });
+
+    over100k = array100k.length;
+
+    var temporarySalaries = salaries.slice();
+    salaries.sort((a, b) => b - a);
+
+    var topSalaries = salaries.slice(0, 5);
+    var topNames = [];
+
+    for (let i = 0; i < topSalaries.length; i++){
+      topNames.push(names[temporarySalaries.indexOf(topSalaries[i])]);
+    }
+    
+    console.log('People who earn over $100K:' + over100k);
+
+    var html = '';
+    for (let i = 0; i < topSalaries.length; i++) {
+      html += '<li class="post">' +
+        '<h2>' + topNames[i] + '</h2>' +
+        '<h3>' + topSalaries[i] + '</h3>'
+    }
+    container.innerHTML = '<ul id = "boston">' + html + '</ul>';
+  }
+  renderBoston(boston, document.getElementById('container'));
+</script>
