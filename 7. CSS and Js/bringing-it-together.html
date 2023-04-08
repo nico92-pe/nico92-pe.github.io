@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid</title>
+    <style>
+        .on{
+            background: orange;
+        }                
+        .content{
+            display: grid;
+            grid-template-columns: repeat(10,1fr);
+            grid-template-rows: repeat(10,1fr);
+            gap: 5px;
+        }
+        div{
+            padding: 10px;
+            text-align: center;
+            border-style: solid;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="createGrid()">CREATE GRID</button>    
+    <button onclick="move()" style="margin-bottom: 10px;">MOVE</button>
+    <main class="content" id="target">
+    </main>
+    <script>
+        function createGrid(){
+            for (let i = 0; i < 100; i++){
+                const node = document.createDocumentFragment();
+                const li = node
+                .appendChild(document.createElement("div"));
+                li.textContent = i + 1;
+                li.id = `n${i+1}`;
+                document.getElementById('target').appendChild(node);                
+            }
+        }
+        function move(i){
+            timer = setTimeout(() => {
+                if (i==undefined) i=1;
+                const element = document.getElementById(`n${i}`);
+                element.classList.toggle('on');
+                if (i-1 > 0){
+                    const element2 = document.getElementById(`n${i-1}`);
+                    element2.classList.toggle('on');
+                }
+                move(i+1);
+            }, 300);   
+        }
+    </script>
+</body>
+</html>
