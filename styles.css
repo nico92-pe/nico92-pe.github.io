@@ -1,0 +1,30 @@
+#section{
+    padding-top: 1em;
+}
+
+.container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.h5{
+    color: blue;
+}
+
+#top{
+    background-color: #DAE2F5;
+}
+
+#sec0{
+    background-color: #C5C7DA;
+    color: black;
+}
+
+#sec1{
+    padding-top: 1.5em;
+}
+
+#my-link {
+    color: black;
+    text-decoration: none;
+  }
